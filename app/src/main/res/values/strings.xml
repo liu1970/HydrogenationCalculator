@@ -1,0 +1,31 @@
+<resources>
+    <string name="app_name">加氢转选</string>
+    <string name="lastWeek">上周:</string>
+    <string name="thisWeek">本周:</string>
+    <string name="t_512709">T-512709</string>
+    <string name="ca_">CA: </string>
+    <string name="ce_">CE:</string>
+    <string name="bz_">BZ: </string>
+    <string name="ae_51203">AE-51203</string>
+    <string name="ae_51101b">AE-51101B</string>
+    <string name="qin_">轻：</string>
+    <string name="mpca_">MPCA: </string>
+    <string name="ae_51103a">AE-51103A</string>
+    <string name="ae_51201">AE-51201</string>
+    <string name="count">合计：</string>
+    <string name="result">结果：</string>
+    <string name="a_no">位号</string>
+    <string name="conversion_rate">转化率</string>
+    <string name="selectivity">选择性</string>
+    <string name="yield">收率</string>
+    <string name="ae_51103b">AE-51103B:</string>
+    <string name="time">时间</string>
+    <string name="select_history">历史查询</string>
+    <string name="compute_week">计算周产</string>
+    <string name="save">保存</string>
+    <string name="bz">BZ</string>
+    <string name="ce">CE</string>
+    <string name="ca">CA</string>
+    <string name="mpca">MPCA</string>
+    <string name="qin">轻</string>
+</resources>

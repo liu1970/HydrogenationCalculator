@@ -1,0 +1,236 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".WeekActivity">
+
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:stretchColumns="8"
+        tools:ignore="UselessParent">
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/textView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/ae_51203"
+                android:textColor="#DD2C00" />
+
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_column="2"
+                android:text="@string/bz_"
+                android:textColor="#651FFF" />
+
+            <EditText
+                android:id="@+id/bz_week"
+                android:layout_width="35dp"
+                android:layout_height="25dp"
+                android:background="@drawable/edit_background"
+                android:inputType="number|numberDecimal"
+                android:textColor="@color/ic_launcher_background"
+                android:textSize="12sp"
+                android:paddingStart="5dp"
+                android:paddingLeft="5dp"
+                tools:ignore="RtlSymmetry" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/ce_"
+                android:textColor="#651FFF" />
+
+            <EditText
+                android:id="@+id/ce_week"
+                android:layout_width="35dp"
+                android:layout_height="25dp"
+                android:background="@drawable/edit_background"
+                android:inputType="number|numberDecimal"
+                android:paddingLeft="5dp"
+                android:textColor="@color/ic_launcher_background"
+                android:textSize="12sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/ca_"
+                android:textColor="#651FFF" />
+
+            <EditText
+                android:id="@+id/ca_week"
+                android:layout_width="35dp"
+                android:layout_height="25dp"
+                android:background="@drawable/edit_background"
+                android:inputType="number|numberDecimal"
+                android:paddingLeft="5dp"
+                android:textColor="@color/ic_launcher_background"
+                android:textSize="12sp" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/t_512709"
+                android:textColor="#DD2C00" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_column="2"
+                android:text="@string/lastWeek"
+                android:textColor="#651FFF" />
+
+            <EditText
+                android:id="@+id/lastWeek"
+                android:layout_width="35dp"
+                android:layout_height="25dp"
+                android:background="@drawable/edit_background"
+                android:inputType="number|numberDecimal"
+                android:paddingLeft="5dp"
+                android:textColor="@color/ic_launcher_background"
+                android:textSize="12sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/thisWeek"
+                android:textColor="#651FFF" />
+
+            <EditText
+                android:id="@+id/thisWeek"
+                android:layout_width="35dp"
+                android:layout_height="25dp"
+                android:background="@drawable/edit_background"
+                android:inputType="number|numberDecimal"
+                android:paddingLeft="5dp"
+                android:textColor="@color/ic_launcher_background"
+                android:textSize="12sp" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/result"
+                android:textColor="#DD2C00" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_column="2"
+                android:layout_span="6"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="折算苯: "
+                    android:textColor="#651FFF" />
+
+                <TextView
+                    android:id="@+id/zbz"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp" />
+            </LinearLayout>
+
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_column="2"
+                android:layout_span="6"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="折算氢: "
+                    android:textColor="#651FFF" />
+
+                <TextView
+                    android:id="@+id/zh2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp" />
+            </LinearLayout>
+
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_column="2"
+                android:layout_span="6"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="T-512709: "
+                    android:textColor="#651FFF" />
+
+                <TextView
+                    android:id="@+id/t512709"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp" />
+            </LinearLayout>
+
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="20dp"
+            android:padding="20dp">
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_span="9"
+                android:onClick="start"
+                android:text="计算" />
+        </TableRow>
+    </TableLayout>
+
+</LinearLayout>
