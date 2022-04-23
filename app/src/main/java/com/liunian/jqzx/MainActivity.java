@@ -122,8 +122,21 @@ public class MainActivity extends AppCompatActivity {
                 }catch (NumberFormatException e) {
                     Toast.makeText(MainActivity.this, "请输入正确的值", Toast.LENGTH_SHORT).show();
                 }
+                Date date = new Date();
+                SimpleDateFormat dateFormat = new SimpleDateFormat("hh");
+                String time = dateFormat.format(date);
+                int itime = Integer.parseInt(time);
+                if (itime <14&&itime >8){
+                    time="08";
+                }else if (itime >14&&itime<20){
+                    time="14";
+                }else if(itime>2&&itime<8){
+                    time="02";
+                }else if (itime>20){
+                    time="20";
+                }
                 ClipboardManager cm = (ClipboardManager) getSystemService(Context.CLIPBOARD_SERVICE);
-                ClipData clipData = ClipData.newPlainText("", "环己酮加氢  :00样" +
+                ClipData clipData = ClipData.newPlainText("", "环己酮加氢" + time+":00样" +
                         "\n转化率 A:"+ZXS.Z103A+" B:"+ZXS.Z103B+"" +
                         "\n选择性 A: "+ZXS.X103A+ " B:"+ZXS.X103B+"" +
                         "\n总转化率:"+ZXS.Z201+"" +
