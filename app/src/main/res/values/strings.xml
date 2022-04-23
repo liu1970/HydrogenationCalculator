@@ -28,4 +28,7 @@
     <string name="ca">CA</string>
     <string name="mpca">MPCA</string>
     <string name="qin">轻</string>
+    <string name="add_end">合计</string>
+    <string name="calculate">计算</string>
+    <string name="clear">清空</string>
 </resources>

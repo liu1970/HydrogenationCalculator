@@ -59,10 +59,11 @@ public class WeekActivity extends AppCompatActivity {
 
     }
 
+
     private void compute() {
         float liquidity = this_week_value - last_week_value;
-        double zsbz = liquidity * 17.46 * 78 * ((ce_value / 82) + (ca_value / 84) + (bz_value / 78));
-        double zsh2 = liquidity * 17.46 * 1000 * 22.4 * (ce_value / 41 + ca_value / 28);
+        double zsbz = (liquidity * 17.46 * 78 * ((ce_value / 82) + (ca_value / 84) + (bz_value / 78)))/100;
+        double zsh2 = (liquidity * 17.46 * 1000 * 22.4 * (ce_value / 41 + ca_value / 28))/100;
         liquidity = new BigDecimal(liquidity).setScale(2, BigDecimal.ROUND_HALF_UP).floatValue();
         zsbz = new BigDecimal(zsbz).setScale(4, BigDecimal.ROUND_HALF_UP).doubleValue();
         zsh2 = new BigDecimal(zsh2).setScale(4, BigDecimal.ROUND_HALF_UP).doubleValue();

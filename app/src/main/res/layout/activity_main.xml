@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#FFFFFF"
@@ -52,7 +53,10 @@
                 android:lines="1"
                 android:paddingLeft="5dp"
                 android:textColor="@color/ic_launcher_background"
-                android:textSize="12sp" />
+                android:textSize="12sp"
+                android:importantForAutofill="no"
+                android:paddingStart="5dp"
+                tools:ignore="RtlSymmetry" />
 
             <TextView
                 android:layout_width="wrap_content"
@@ -60,7 +64,8 @@
                 android:layout_marginLeft="5dp"
                 android:layout_weight="1"
                 android:text="@string/ce_"
-                android:textColor="#651FFF" />
+                android:textColor="#651FFF"
+                android:layout_marginStart="5dp" />
 
             <EditText
                 android:id="@+id/ce1b"
@@ -72,7 +77,10 @@
                 android:lines="1"
                 android:paddingLeft="5dp"
                 android:textColor="@color/ic_launcher_background"
-                android:textSize="12sp" />
+                android:textSize="12sp"
+                android:importantForAutofill="no"
+                android:paddingStart="5dp"
+                tools:ignore="LabelFor,RtlSymmetry" />
 
             <TextView
                 android:layout_width="wrap_content"
@@ -80,7 +88,8 @@
                 android:layout_marginLeft="5dp"
                 android:layout_weight="1"
                 android:text="@string/ca_"
-                android:textColor="#651FFF" />
+                android:textColor="#651FFF"
+                android:layout_marginStart="5dp" />
 
             <EditText
                 android:id="@+id/ca1b"
@@ -92,7 +101,10 @@
                 android:lines="1"
                 android:paddingLeft="5dp"
                 android:textColor="@color/ic_launcher_background"
-                android:textSize="12sp" />
+                android:textSize="12sp"
+                android:paddingStart="5dp"
+                tools:ignore="LabelFor,RtlSymmetry"
+                android:importantForAutofill="no" />
 
             <TextView
                 android:layout_width="wrap_content"
@@ -100,7 +112,8 @@
                 android:layout_marginLeft="5dp"
                 android:layout_weight="1"
                 android:text="@string/qin_"
-                android:textColor="#651FFF" />
+                android:textColor="#651FFF"
+                android:layout_marginStart="5dp" />
 
             <EditText
                 android:id="@+id/q1b"
@@ -112,7 +125,10 @@
                 android:lines="1"
                 android:paddingLeft="5dp"
                 android:textColor="@color/ic_launcher_background"
-                android:textSize="12sp" />
+                android:textSize="12sp"
+                tools:ignore="LabelFor,RtlSymmetry"
+                android:importantForAutofill="no"
+                android:paddingStart="5dp" />
 
             <TextView
                 android:layout_width="wrap_content"
@@ -121,7 +137,8 @@
                 android:layout_weight="1"
                 android:text="@string/qin_"
                 android:textColor="#651FFF"
-                android:visibility="invisible" />
+                android:visibility="invisible"
+                android:layout_marginStart="5dp" />
 
             <EditText
                 android:layout_width="35dp"
@@ -133,7 +150,10 @@
                 android:paddingLeft="5dp"
                 android:textColor="@color/ic_launcher_background"
                 android:textSize="12sp"
-                android:visibility="invisible" />
+                android:visibility="invisible"
+                tools:ignore="LabelFor,RtlSymmetry"
+                android:importantForAutofill="no"
+                android:paddingStart="5dp" />
 
         </TableRow>
 
@@ -175,11 +195,15 @@
                 android:lines="1"
                 android:paddingLeft="5dp"
                 android:textColor="@color/ic_launcher_background"
-                android:textSize="12sp" />
+                android:textSize="12sp"
+                tools:ignore="LabelFor,RtlSymmetry"
+                android:importantForAutofill="no"
+                android:paddingStart="5dp" />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginStart="5dp"
                 android:layout_marginLeft="5dp"
                 android:layout_weight="1"
                 android:text="@string/ce_"
@@ -195,7 +219,10 @@
                 android:lines="1"
                 android:paddingLeft="5dp"
                 android:textColor="@color/ic_launcher_background"
-                android:textSize="12sp" />
+                android:textSize="12sp"
+                android:paddingStart="5dp"
+                tools:ignore="LabelFor,RtlSymmetry"
+                android:importantForAutofill="no" />
 
             <TextView
                 android:layout_width="wrap_content"
@@ -203,7 +230,8 @@
                 android:layout_marginLeft="5dp"
                 android:layout_weight="1"
                 android:text="@string/ca_"
-                android:textColor="#651FFF" />
+                android:textColor="#651FFF"
+                android:layout_marginStart="5dp" />
 
             <EditText
                 android:id="@+id/ca3a"
@@ -215,7 +243,10 @@
                 android:lines="1"
                 android:paddingLeft="5dp"
                 android:textColor="@color/ic_launcher_background"
-                android:textSize="12sp" />
+                android:textSize="12sp"
+                android:paddingStart="5dp"
+                tools:ignore="RtlSymmetry"
+                android:importantForAutofill="no" />
 
             <TextView
                 android:layout_width="wrap_content"
@@ -223,7 +254,8 @@
                 android:layout_marginLeft="5dp"
                 android:layout_weight="1"
                 android:text="@string/mpca_"
-                android:textColor="#651FFF" />
+                android:textColor="#651FFF"
+                android:layout_marginStart="5dp" />
 
             <EditText
                 android:id="@+id/mpca3a"
@@ -510,7 +542,8 @@
                 android:layout_height="wrap_content"
                 android:layout_span="14"
                 android:gravity="end"
-                android:padding="10dp">
+                android:padding="10dp"
+                tools:ignore="UselessParent">
 
                 <Switch
                     android:id="@+id/switch1"
@@ -519,7 +552,8 @@
                     android:checked="true"
                     android:gravity="center"
                     android:text="@string/save"
-                    android:textColor="#651FFF" />
+                    android:textColor="#651FFF"
+                    tools:ignore="UseSwitchCompatOrMaterialXml" />
             </LinearLayout>
         </TableRow>
 
@@ -545,7 +579,8 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_span="10"
-                android:orientation="vertical">
+                android:orientation="vertical"
+                tools:ignore="UselessParent">
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -564,7 +599,7 @@
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
                         android:gravity="center"
-                        android:text="合计"
+                        android:text="@string/add_end"
                         android:textColor="@color/black" />
 
 
@@ -586,7 +621,7 @@
                     <TextView
                         android:layout_width="80dp"
                         android:layout_height="wrap_content"
-                        android:text="AE-51101B:"
+                        android:text="@string/ae_51101b"
                         android:textColor="@color/black" />
 
                     <TextView
@@ -605,7 +640,7 @@
                     <TextView
                         android:layout_width="80dp"
                         android:layout_height="wrap_content"
-                        android:text="AE-51103A:"
+                        android:text="@string/ae_51103a"
                         android:textColor="@color/black" />
 
                     <TextView
@@ -644,7 +679,7 @@
                     <TextView
                         android:layout_width="80dp"
                         android:layout_height="wrap_content"
-                        android:text="AE-51201:"
+                        android:text="@string/ae_51201"
                         android:textColor="@color/black" />
 
                     <TextView
@@ -735,7 +770,7 @@
                     <TextView
                         android:layout_width="80dp"
                         android:layout_height="wrap_content"
-                        android:text="AE-51103A:"
+                        android:text="@string/ae_51103a"
                         android:textColor="@color/black" />
 
                     <TextView
@@ -838,7 +873,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_span="7"
-                android:text="计算" />
+                android:text="@string/calculate" />
 
             <Button
                 android:id="@+id/clear"
@@ -846,7 +881,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="20dp"
                 android:layout_span="4"
-                android:text="清空" />
+                android:text="@string/clear" />
         </TableRow>
     </TableLayout>
 
