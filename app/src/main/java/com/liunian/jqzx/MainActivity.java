@@ -258,7 +258,7 @@ public class MainActivity extends AppCompatActivity {
         s201.setText(ZXS.S201 + "");
         if (checked) {
             Date date = new Date();
-            SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd hh:mm:ss");
+            SimpleDateFormat dateFormat = new SimpleDateFormat("MM-dd HH:mm");
             String time = dateFormat.format(date);
             AE ae = new AE(bz1 + "", ce1 + "", ca1 + "", q1 + "", mpca1 + "", "AE-51201", time);
             long insert = aeDao.insert(ae);
@@ -305,7 +305,7 @@ public class MainActivity extends AppCompatActivity {
         s3b.setText(ZXS.S103B + "");
         if (checked) {
             Date date = new Date();
-            SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd hh:mm:ss");
+            SimpleDateFormat dateFormat = new SimpleDateFormat("MM-dd HH:mm");
             String time = dateFormat.format(date);
             AE ae = new AE(bz1 + "", ce1 + "", ca1 + "", q1 + "", mpca1 + "", "AE-51103B", time);
             long insert = aeDao.insert(ae);
@@ -355,7 +355,7 @@ public class MainActivity extends AppCompatActivity {
         x3a.setText(ZXS.X103A + "");
         if (checked) {
             Date date = new Date();
-            SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd hh:mm:ss");
+            SimpleDateFormat dateFormat = new SimpleDateFormat("MM-dd HH:mm");
             String time = dateFormat.format(date);
             AE ae = new AE(bz1 + "", ce1 + "", ca1 + "", q1 + "", mpca1 + "", "AE-51103A", time);
             long insert = aeDao.insert(ae);
@@ -396,7 +396,7 @@ public class MainActivity extends AppCompatActivity {
         a[1] = a1ce;
         if (checked) {
             Date date = new Date();
-            SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd hh:mm:ss");
+            SimpleDateFormat dateFormat = new SimpleDateFormat("MM-dd HH:mm");
             String time = dateFormat.format(date);
             AE ae = new AE(bz1 + "", ce1 + "", ca1 + "", q1 + "", "AE-51101B", time);
             long insert = aeDao.insert(ae);
