@@ -18,11 +18,11 @@
 
             <TextView
                 android:id="@+id/a_no"
-                android:layout_width="wrap_content"
+                android:layout_width="20dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:gravity="center"
-                android:text="AE-51103B" />
+                android:text="103B" />
 
             <View
                 android:layout_width="2dp"
@@ -31,11 +31,11 @@
 
             <TextView
                 android:id="@+id/time"
-                android:layout_width="wrap_content"
+                android:layout_width="45dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:gravity="center"
-                android:text="2021-06-01 08:31:24"
+                android:text="06-01 08:31"
                 android:textSize="11sp" />
 
             <View
@@ -45,7 +45,7 @@
 
             <TextView
                 android:id="@+id/bz"
-                android:layout_width="wrap_content"
+                android:layout_width="30dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:gravity="center"
@@ -58,7 +58,7 @@
 
             <TextView
                 android:id="@+id/ce"
-                android:layout_width="wrap_content"
+                android:layout_width="30dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:gravity="center"
@@ -71,7 +71,7 @@
 
             <TextView
                 android:id="@+id/ca"
-                android:layout_width="wrap_content"
+                android:layout_width="30dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:gravity="center"
@@ -84,7 +84,7 @@
 
             <TextView
                 android:id="@+id/mpca"
-                android:layout_width="wrap_content"
+                android:layout_width="30dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:gravity="center"
@@ -97,7 +97,7 @@
 
             <TextView
                 android:id="@+id/q"
-                android:layout_width="wrap_content"
+                android:layout_width="30dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:gravity="center"

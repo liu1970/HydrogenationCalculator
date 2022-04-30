@@ -17,10 +17,10 @@
             android:orientation="horizontal">
 
             <TextView
-                android:layout_width="wrap_content"
+                android:layout_width="20dp"
                 android:layout_height="wrap_content"
-                android:gravity="center"
                 android:layout_weight="1"
+                android:gravity="center"
                 android:text="@string/a_no" />
 
             <View
@@ -29,10 +29,10 @@
                 android:background="#85040000" />
 
             <TextView
-                android:layout_width="wrap_content"
+                android:layout_width="45dp"
                 android:layout_height="wrap_content"
-                android:gravity="center"
                 android:layout_weight="1"
+                android:gravity="center"
                 android:text="@string/time" />
 
             <View
@@ -41,10 +41,10 @@
                 android:background="#85040000" />
 
             <TextView
-                android:layout_width="wrap_content"
-                android:gravity="center"
-                android:layout_weight="1"
+                android:layout_width="30dp"
                 android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
                 android:text="@string/bz" />
 
             <View
@@ -53,10 +53,10 @@
                 android:background="#85040000" />
 
             <TextView
-                android:layout_width="wrap_content"
-                android:gravity="center"
-                android:layout_weight="1"
+                android:layout_width="30dp"
                 android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
                 android:text="@string/ce" />
 
             <View
@@ -65,10 +65,10 @@
                 android:background="#85040000" />
 
             <TextView
-                android:layout_width="wrap_content"
-                android:gravity="center"
-                android:layout_weight="1"
+                android:layout_width="30dp"
                 android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
                 android:text="@string/ca" />
 
             <View
@@ -77,10 +77,10 @@
                 android:background="#85040000" />
 
             <TextView
-                android:layout_width="wrap_content"
+                android:layout_width="30dp"
                 android:layout_height="wrap_content"
-                android:gravity="center"
                 android:layout_weight="1"
+                android:gravity="center"
                 android:text="@string/mpca" />
 
             <View
@@ -89,10 +89,10 @@
                 android:background="#85040000" />
 
             <TextView
-                android:gravity="center"
-                android:layout_width="wrap_content"
-                android:layout_weight="1"
+                android:layout_width="30dp"
                 android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
                 android:text="@string/qin" />
 
         </LinearLayout>

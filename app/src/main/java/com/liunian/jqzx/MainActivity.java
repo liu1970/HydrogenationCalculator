@@ -93,10 +93,10 @@ public class MainActivity extends AppCompatActivity {
             }
         });
         try {
-            select("AE-51101B");
-            select("AE-51103A");
-            select("AE-51103B");
-            select("AE-51201");
+            select("101B");
+            select("103A");
+            select("103B");
+            select("201");
         } catch (Exception e) {
             Toast.makeText(MainActivity.this, "记录为空", Toast.LENGTH_SHORT).show();
         }
@@ -144,6 +144,7 @@ public class MainActivity extends AppCompatActivity {
                         "\n总转化率:" + ZXS.Z201 + "" +
                         "\n总选择性:" + ZXS.X201);
                 cm.setPrimaryClip(clipData);
+                Toast.makeText(MainActivity.this,"已复制",Toast.LENGTH_SHORT).show();
             }
         });
         //清空
@@ -194,27 +195,27 @@ public class MainActivity extends AppCompatActivity {
         for (AE ae : query) {
             String a_no = ae.getA_NO();
             switch (a_no) {
-                case "AE-51101B":
+                case "101B":
                     bz1b.setText(ae.getBZ());
                     ce1b.setText(ae.getCE());
                     ca1b.setText(ae.getCA());
                     q1b.setText(ae.getQ());
                     break;
-                case "AE-51103A":
+                case "103A":
                     bz3a.setText(ae.getBZ());
                     ce3a.setText(ae.getCE());
                     ca3a.setText(ae.getCA());
                     q3a.setText(ae.getQ());
                     mpca3a.setText(ae.getMPCA());
                     break;
-                case "AE-51103B":
+                case "103B":
                     bz3b.setText(ae.getBZ());
                     ce3b.setText(ae.getCE());
                     ca3b.setText(ae.getCA());
                     q3b.setText(ae.getQ());
                     mpca3b.setText(ae.getMPCA());
                     break;
-                case "AE-51201":
+                case "201":
                     bz201.setText(ae.getBZ());
                     ce201.setText(ae.getCE());
                     ca201.setText(ae.getCA());
@@ -260,7 +261,7 @@ public class MainActivity extends AppCompatActivity {
             Date date = new Date();
             SimpleDateFormat dateFormat = new SimpleDateFormat("MM-dd HH:mm");
             String time = dateFormat.format(date);
-            AE ae = new AE(bz1 + "", ce1 + "", ca1 + "", q1 + "", mpca1 + "", "AE-51201", time);
+            AE ae = new AE(bz1 + "", ce1 + "", ca1 + "", q1 + "", mpca1 + "", "201", time);
             long insert = aeDao.insert(ae);
             if (insert == -1) {
                 Toast.makeText(MainActivity.this, "201插入失败", Toast.LENGTH_SHORT).show();
@@ -307,7 +308,7 @@ public class MainActivity extends AppCompatActivity {
             Date date = new Date();
             SimpleDateFormat dateFormat = new SimpleDateFormat("MM-dd HH:mm");
             String time = dateFormat.format(date);
-            AE ae = new AE(bz1 + "", ce1 + "", ca1 + "", q1 + "", mpca1 + "", "AE-51103B", time);
+            AE ae = new AE(bz1 + "", ce1 + "", ca1 + "", q1 + "", mpca1 + "", "103B", time);
             long insert = aeDao.insert(ae);
             if (insert == -1) {
                 Toast.makeText(MainActivity.this, "103B插入失败", Toast.LENGTH_SHORT).show();
@@ -357,7 +358,7 @@ public class MainActivity extends AppCompatActivity {
             Date date = new Date();
             SimpleDateFormat dateFormat = new SimpleDateFormat("MM-dd HH:mm");
             String time = dateFormat.format(date);
-            AE ae = new AE(bz1 + "", ce1 + "", ca1 + "", q1 + "", mpca1 + "", "AE-51103A", time);
+            AE ae = new AE(bz1 + "", ce1 + "", ca1 + "", q1 + "", mpca1 + "", "103A", time);
             long insert = aeDao.insert(ae);
             if (insert == -1) {
                 Toast.makeText(MainActivity.this, "103A插入失败", Toast.LENGTH_SHORT).show();
@@ -398,7 +399,7 @@ public class MainActivity extends AppCompatActivity {
             Date date = new Date();
             SimpleDateFormat dateFormat = new SimpleDateFormat("MM-dd HH:mm");
             String time = dateFormat.format(date);
-            AE ae = new AE(bz1 + "", ce1 + "", ca1 + "", q1 + "", "AE-51101B", time);
+            AE ae = new AE(bz1 + "", ce1 + "", ca1 + "", q1 + "", "101B", time);
             long insert = aeDao.insert(ae);
             if (insert == -1) {
                 Toast.makeText(MainActivity.this, "101B插入失败", Toast.LENGTH_SHORT).show();
