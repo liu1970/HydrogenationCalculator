@@ -49,9 +49,9 @@ public class MainActivity extends AppCompatActivity {
     private EditText ca201;
     private EditText q201;
     private EditText mpca201;
-    private TextView h3a, h3b, h201, z3a, x3a, x3b, z3b, z201, x201,h1b;
+    private TextView h3a, h3b, h201, z3a, x3a, x3b, z3b, z201, x201, h1b;
     TextView s3a, s3b, s201;
-    private Button calculate,clear;
+    private Button calculate, clear;
     private AeDao aeDao = null;
     private Switch aSwitch;
     private boolean checked = true;
@@ -59,7 +59,7 @@ public class MainActivity extends AppCompatActivity {
     @Override
     public boolean onOptionsItemSelected(@NonNull MenuItem item) {
         int itemId = item.getItemId();
-        switch (itemId){
+        switch (itemId) {
             case R.id.select:
                 Intent intent = SelectActivity.getIntent(this);
                 startActivity(intent);
@@ -75,7 +75,7 @@ public class MainActivity extends AppCompatActivity {
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         MenuInflater menuInflater = getMenuInflater();
-        menuInflater.inflate(R.menu.item,menu);
+        menuInflater.inflate(R.menu.item, menu);
         return true;
     }
 
@@ -84,12 +84,12 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         init();
-        aeDao =new AeDao(this);
+        aeDao = new AeDao(this);
         aSwitch.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
-                checked=isChecked;
-                Toast.makeText(MainActivity.this, isChecked?"开启保存":"不保存", Toast.LENGTH_SHORT).show();
+                checked = isChecked;
+                Toast.makeText(MainActivity.this, isChecked ? "开启保存" : "不保存", Toast.LENGTH_SHORT).show();
             }
         });
         try {
@@ -103,7 +103,7 @@ public class MainActivity extends AppCompatActivity {
         calculate.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                double[] a={1,1,1,1};
+                double[] a = {1, 1, 1, 1};
                 try {
                     a = ae101b();
                 } catch (NumberFormatException e) {
@@ -111,36 +111,38 @@ public class MainActivity extends AppCompatActivity {
                 }
                 try {
                     ae103a(a);
-                }catch (NumberFormatException e) {
+                } catch (NumberFormatException e) {
                     Toast.makeText(MainActivity.this, "请输入正确的值", Toast.LENGTH_SHORT).show();
-                }try {
+                }
+                try {
                     ae103b(a);
-                }catch (NumberFormatException e) {
+                } catch (NumberFormatException e) {
                     Toast.makeText(MainActivity.this, "请输入正确的值", Toast.LENGTH_SHORT).show();
-                }try {
+                }
+                try {
                     ae201(a);
-                }catch (NumberFormatException e) {
+                } catch (NumberFormatException e) {
                     Toast.makeText(MainActivity.this, "请输入正确的值", Toast.LENGTH_SHORT).show();
                 }
                 Date date = new Date();
                 SimpleDateFormat dateFormat = new SimpleDateFormat("hh");
                 String time = dateFormat.format(date);
                 int itime = Integer.parseInt(time);
-                if (itime <14&&itime >8){
-                    time="08";
-                }else if (itime >14&&itime<20){
-                    time="14";
-                }else if(itime>2&&itime<8){
-                    time="02";
-                }else if (itime>20){
-                    time="20";
+                if (itime < 14 && itime > 8) {
+                    time = "08";
+                } else if (itime > 14 && itime < 20) {
+                    time = "14";
+                } else if (itime < 8 && itime > 2) {
+                    time = "02";
+                } else if (itime > 20) {
+                    time = "20";
                 }
                 ClipboardManager cm = (ClipboardManager) getSystemService(Context.CLIPBOARD_SERVICE);
-                ClipData clipData = ClipData.newPlainText("", "环己酮加氢" + time+":00样" +
-                        "\n转化率 A:"+ZXS.Z103A+" B:"+ZXS.Z103B+"" +
-                        "\n选择性 A: "+ZXS.X103A+ " B:"+ZXS.X103B+"" +
-                        "\n总转化率:"+ZXS.Z201+"" +
-                        "\n总选择性:"+ZXS.X201);
+                ClipData clipData = ClipData.newPlainText("", "环己酮加氢" + time + ":00样" +
+                        "\n转化率 A:" + ZXS.Z103A + " B:" + ZXS.Z103B + "" +
+                        "\n选择性 A: " + ZXS.X103A + " B:" + ZXS.X103B + "" +
+                        "\n总转化率:" + ZXS.Z201 + "" +
+                        "\n总选择性:" + ZXS.X201);
                 cm.setPrimaryClip(clipData);
             }
         });
@@ -172,18 +174,20 @@ public class MainActivity extends AppCompatActivity {
         });
 
     }
-    private static class ZXS{
-        public static Double Z103A=0.0;
-        public static Double X103A=0.0;
-        public static Double S103A=0.0;
-        public static Double Z103B=0.0;
-        public static Double X103B=0.0;
-        public static Double S103B=0.0;
-        public static Double Z201=0.0;
-        public static Double X201=0.0;
-        public static Double S201=0.0;
+
+    private static class ZXS {
+        public static Double Z103A = 0.0;
+        public static Double X103A = 0.0;
+        public static Double S103A = 0.0;
+        public static Double Z103B = 0.0;
+        public static Double X103B = 0.0;
+        public static Double S103B = 0.0;
+        public static Double Z201 = 0.0;
+        public static Double X201 = 0.0;
+        public static Double S201 = 0.0;
     }
-//读取数据库数据写入文本框
+
+    //读取数据库数据写入文本框
     private void select(String w) {
         AeDao aeDao = new AeDao(this);
         ArrayList<AE> query = aeDao.query(w);
@@ -229,7 +233,7 @@ public class MainActivity extends AppCompatActivity {
         double ce1 = Double.parseDouble(String.valueOf(ce201.getText()));
         double ca1 = Double.parseDouble(String.valueOf(ca201.getText()));
         double q1 = Double.parseDouble(String.valueOf(q201.getText()));
-        addAe.addAe201=(bz1+ce1 + ca1 + q1+mpca1);
+        addAe.addAe201 = (bz1 + ce1 + ca1 + q1 + mpca1);
 
         double wbz = bz1 / 78;
         double wce = ce1 / 82;
@@ -261,7 +265,7 @@ public class MainActivity extends AppCompatActivity {
             if (insert == -1) {
                 Toast.makeText(MainActivity.this, "201插入失败", Toast.LENGTH_SHORT).show();
             } else {
-               // Toast.makeText(MainActivity.this, "201插入成功", Toast.LENGTH_SHORT).show();
+                // Toast.makeText(MainActivity.this, "201插入成功", Toast.LENGTH_SHORT).show();
                 Log.d(TAG, "ae201: 插入成功");
             }
         }
@@ -275,7 +279,7 @@ public class MainActivity extends AppCompatActivity {
         double ca1 = Double.parseDouble(String.valueOf(ca3b.getText()));
         double q1 = Double.parseDouble(String.valueOf(q3b.getText()));
         double mpca1 = Double.parseDouble(String.valueOf(mpca3b.getText()));
-        addAe.addAe103b=(bz1+ce1 + ca1 + q1+mpca1);
+        addAe.addAe103b = (bz1 + ce1 + ca1 + q1 + mpca1);
         double wbz = bz1 / 78;
         double wce = ce1 / 82;
         double wca = (ca1 + mpca1) / 84;
@@ -293,7 +297,7 @@ public class MainActivity extends AppCompatActivity {
         ZXS.Z103B = g.setScale(2, BigDecimal.ROUND_HALF_UP).doubleValue();
         z3b.setText(ZXS.Z103B + "");
         ZXS.X103B = ((a3bce - 0.5 * a1ce) / (a1bz - a3bbz)) * 100;
-        BigDecimal b = new BigDecimal(ZXS.X103A);
+        BigDecimal b = new BigDecimal(ZXS.X103B);
         ZXS.X103B = b.setScale(2, BigDecimal.ROUND_HALF_UP).doubleValue();
         x3b.setText(ZXS.X103B + "");
         double s = ZXS.Z103B * ZXS.X103B;
@@ -322,15 +326,15 @@ public class MainActivity extends AppCompatActivity {
         double ce1 = Double.parseDouble(String.valueOf(ce3a.getText()));
         double ca1 = Double.parseDouble(String.valueOf(ca3a.getText()));
         double q1 = Double.parseDouble(String.valueOf(q3a.getText()));
-        addAe.addAe103a=(mpca1+bz1+ce1+ca1+q1);
+        addAe.addAe103a = (mpca1 + bz1 + ce1 + ca1 + q1);
         double wbz = bz1 / 78;
         double wce = ce1 / 82;
         double wca = (ca1 + mpca1) / 84;
         double wq = q1 / 99;
         double a3abz = wbz / (wbz + wce + wca + wq);
         double a3ace = wce / (wbz + wce + wca + wq);
-        double a3aca = wca / (wbz + wce + wca + wq);
-        double a3aq = wq / (wbz + wce + wca + wq);
+        /*double a3aca = wca / (wbz + wce + wca + wq);
+        double a3aq = wq / (wbz + wce + wca + wq);*/
 
 
         BigDecimal bg = new BigDecimal(addAe.addAe103a);
@@ -340,7 +344,7 @@ public class MainActivity extends AppCompatActivity {
         BigDecimal g = new BigDecimal(ZXS.Z103A);
         ZXS.Z103A = g.setScale(2, BigDecimal.ROUND_HALF_UP).doubleValue();
 
-         ZXS.X103A = ((a3ace - 0.5 * a1ce) / (a1bz - a3abz)) * 100;
+        ZXS.X103A = ((a3ace - 0.5 * a1ce) / (a1bz - a3abz)) * 100;
         BigDecimal b = new BigDecimal(ZXS.X103A);
         ZXS.X103A = b.setScale(2, BigDecimal.ROUND_HALF_UP).doubleValue();
         ZXS.S103A = ZXS.Z103A * ZXS.X103A;
@@ -363,11 +367,12 @@ public class MainActivity extends AppCompatActivity {
             }
         }
     }
-    private static class addAe{
-        public static Double addAe101b=0.0;
-        public static Double addAe103a=0.0;
-        public static Double addAe103b=0.0;
-        public static Double addAe201=0.0;
+
+    private static class addAe {
+        public static Double addAe101b = 0.0;
+        public static Double addAe103a = 0.0;
+        public static Double addAe103b = 0.0;
+        public static Double addAe201 = 0.0;
     }
 
     private double[] ae101b() {
@@ -381,10 +386,10 @@ public class MainActivity extends AppCompatActivity {
         double wca = ca1 / 84;
         double wq = q1 / 99;
 
-        addAe.addAe101b=(bz1+ce1+ca1+q1);
+        addAe.addAe101b = (bz1 + ce1 + ca1 + q1);
         BigDecimal bg = new BigDecimal(addAe.addAe101b);
         addAe.addAe101b = bg.setScale(2, BigDecimal.ROUND_HALF_UP).doubleValue();
-        h1b.setText(addAe.addAe101b+"");
+        h1b.setText(addAe.addAe101b + "");
         double a1bz = wbz / (wbz + wce + wca + wq);
         double a1ce = wce / (wbz + wce + wca + wq);
         a[0] = a1bz;
@@ -438,10 +443,10 @@ public class MainActivity extends AppCompatActivity {
         s3a = findViewById(R.id.ss3a);
         s3b = findViewById(R.id.ss3b);
         s201 = findViewById(R.id.ss201);
-        aSwitch=findViewById(R.id.switch1);
+        aSwitch = findViewById(R.id.switch1);
         checked = aSwitch.isChecked();
-        clear=findViewById(R.id.clear);
-        h1b=findViewById(R.id.h1b);
+        clear = findViewById(R.id.clear);
+        h1b = findViewById(R.id.h1b);
     }
 
     private static boolean mBackKeyPressed = false;//记录是否有首次按键
