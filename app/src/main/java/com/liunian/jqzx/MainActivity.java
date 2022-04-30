@@ -125,7 +125,7 @@ public class MainActivity extends AppCompatActivity {
                     Toast.makeText(MainActivity.this, "请输入正确的值", Toast.LENGTH_SHORT).show();
                 }
                 Date date = new Date();
-                SimpleDateFormat dateFormat = new SimpleDateFormat("hh");
+                SimpleDateFormat dateFormat = new SimpleDateFormat("HH");
                 String time = dateFormat.format(date);
                 int itime = Integer.parseInt(time);
                 if (itime < 14 && itime > 8) {
