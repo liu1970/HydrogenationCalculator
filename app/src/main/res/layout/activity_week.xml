@@ -38,14 +38,14 @@
             <EditText
                 android:id="@+id/bz_week"
                 android:layout_width="35dp"
-                android:layout_height="25dp"
+                android:layout_height="match_parent"
                 android:background="@drawable/edit_background"
                 android:inputType="number|numberDecimal"
                 android:textColor="@color/ic_launcher_background"
                 android:textSize="12sp"
                 android:paddingStart="5dp"
                 android:paddingLeft="5dp"
-                tools:ignore="RtlSymmetry"
+                tools:ignore="LabelFor,RtlSymmetry"
                 android:importantForAutofill="no" />
 
             <TextView
@@ -57,14 +57,14 @@
             <EditText
                 android:id="@+id/ce_week"
                 android:layout_width="35dp"
-                android:layout_height="25dp"
+                android:layout_height="match_parent"
                 android:background="@drawable/edit_background"
                 android:inputType="number|numberDecimal"
                 android:paddingLeft="5dp"
                 android:textColor="@color/ic_launcher_background"
                 android:textSize="12sp"
                 android:paddingStart="5dp"
-                tools:ignore="RtlSymmetry"
+                tools:ignore="LabelFor,RtlSymmetry"
                 android:importantForAutofill="no" />
 
             <TextView
@@ -76,14 +76,14 @@
             <EditText
                 android:id="@+id/ca_week"
                 android:layout_width="35dp"
-                android:layout_height="25dp"
+                android:layout_height="match_parent"
                 android:background="@drawable/edit_background"
                 android:inputType="number|numberDecimal"
                 android:paddingLeft="5dp"
                 android:textColor="@color/ic_launcher_background"
                 android:textSize="12sp"
                 android:paddingStart="5dp"
-                tools:ignore="RtlSymmetry"
+                tools:ignore="LabelFor,RtlSymmetry"
                 android:importantForAutofill="no" />
         </TableRow>
 
@@ -112,14 +112,14 @@
             <EditText
                 android:id="@+id/lastWeek"
                 android:layout_width="35dp"
-                android:layout_height="25dp"
+                android:layout_height="match_parent"
                 android:background="@drawable/edit_background"
                 android:inputType="number|numberDecimal"
                 android:paddingLeft="5dp"
                 android:textColor="@color/ic_launcher_background"
                 android:textSize="12sp"
                 android:paddingStart="5dp"
-                tools:ignore="RtlSymmetry"
+                tools:ignore="LabelFor,RtlSymmetry"
                 android:importantForAutofill="no" />
 
             <TextView
@@ -131,7 +131,7 @@
             <EditText
                 android:id="@+id/thisWeek"
                 android:layout_width="35dp"
-                android:layout_height="25dp"
+                android:layout_height="match_parent"
                 android:background="@drawable/edit_background"
                 android:inputType="number|numberDecimal"
                 android:paddingLeft="5dp"
@@ -139,7 +139,7 @@
                 android:textSize="12sp"
                 android:importantForAutofill="no"
                 android:paddingStart="5dp"
-                tools:ignore="RtlSymmetry" />
+                tools:ignore="LabelFor,RtlSymmetry" />
         </TableRow>
 
         <TableRow
@@ -172,6 +172,7 @@
 
                 <TextView
                     android:id="@+id/zbz"
+                    android:textColor="#888888"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="10dp" />
@@ -198,7 +199,8 @@
 
                 <TextView
                     android:id="@+id/zh2"
-                    android:layout_width="wrap_content"
+                    android:textColor="#888888"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="10dp" />
             </LinearLayout>
@@ -224,7 +226,8 @@
 
                 <TextView
                     android:id="@+id/t512709"
-                    android:layout_width="wrap_content"
+                    android:textColor="#888888"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="10dp" />
             </LinearLayout>

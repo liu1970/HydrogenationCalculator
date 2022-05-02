@@ -20,6 +20,7 @@
                 android:layout_width="20dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
+                android:textColor="#888888"
                 android:gravity="center"
                 android:text="@string/a_no" />
 
@@ -32,6 +33,7 @@
                 android:layout_width="45dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
+                android:textColor="#888888"
                 android:gravity="center"
                 android:text="@string/time" />
 
@@ -45,6 +47,7 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:gravity="center"
+                android:textColor="#888888"
                 android:text="@string/bz" />
 
             <View
@@ -57,6 +60,7 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:gravity="center"
+                android:textColor="#888888"
                 android:text="@string/ce" />
 
             <View
@@ -67,6 +71,7 @@
             <TextView
                 android:layout_width="30dp"
                 android:layout_height="wrap_content"
+                android:textColor="#888888"
                 android:layout_weight="1"
                 android:gravity="center"
                 android:text="@string/ca" />
@@ -79,6 +84,7 @@
             <TextView
                 android:layout_width="30dp"
                 android:layout_height="wrap_content"
+                android:textColor="#888888"
                 android:layout_weight="1"
                 android:gravity="center"
                 android:text="@string/mpca" />
@@ -91,6 +97,7 @@
             <TextView
                 android:layout_width="30dp"
                 android:layout_height="wrap_content"
+                android:textColor="#888888"
                 android:layout_weight="1"
                 android:gravity="center"
                 android:text="@string/qin" />
